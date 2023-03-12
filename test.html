@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Juego de cartas intercambiables</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+
+		<h1>Juego de cartas intercambiables</h1>
+
+		<h2>Cartas del jugador A:</h2>
+		<ul id="jugador-a"></ul>
+
+		<h2>Cartas del jugador B:</h2>
+		<ul id="jugador-b"></ul>
+
+		<button id="jugar" onclick="jugar()" class="btn btn-primary">Jugar</button>
+
+		<h3 id="resultado" class="alert alert-warning"></h3>
+	</div>
+
+	<script>
+		const cartas = [
+			{ nombre: "Zeus", ataque: 10, defensa: 8 },
+			{ nombre: "Hades", ataque: 9, defensa: 7 },
+			{ nombre: "Poseidón", ataque: 8, defensa: 9 },
+			{ nombre: "Atenea", ataque: 7, defensa: 8 },
+			{ nombre: "Ares", ataque: 9, defensa: 6 },
+			{ nombre: "Afrodita", ataque: 6, defensa: 7 },
+			{ nombre: "Artemisa", ataque: 7, defensa: 7 },
+			{ nombre: "Hefesto", ataque: 8, defensa: 10 },
+			{ nombre: "Dionisio", ataque: 5, defensa: 6 },
+			{ nombre: "Apolo", ataque: 6, defensa: 8 }
+			];
+
+        // Obtener 3 cartas aleatorias para cada jugador
+		const cartasJugadorA = obtenerCartasAleatorias();
+		const cartasJugadorB = obtenerCartasAleatorias();
+
+		function obtenerCartasAleatorias() {
+			const cartasAleatorias = [];
+			while (cartasAleatorias.length < 3) {
+				const carta = cartas[Math.floor(Math.random() * cartas.length)];
+				if (!cartasAleatorias.includes(carta)) {
+					cartasAleatorias.push(carta);
+				}
+			}
+			return cartasAleatorias;
+		}
+
+		function jugar() {
+            // Obtener la carta seleccionada por el jugador A
+			const cartasJugadorALista = document.querySelectorAll("#jugador-a li");
+			let cartaSeleccionadaA;
+			cartasJugadorALista.forEach(carta => {
+				if (carta.classList.contains("seleccionada")) {
+					const cartaIndex = carta.dataset.index;
+					cartaSeleccionadaA = cartasJugadorA[cartaIndex];
+				}
+			});
+			if (!cartaSeleccionadaA) {
+				alert("Debes seleccionar una carta antes de jugar");
+				return;
+			}
+
+            // Seleccionar aleatoriamente una carta para el jugador B
+			const cartaSeleccionadaB = cartasJugadorB[Math.floor(Math.random() * 3)];
+
+            // Comparar las cartas seleccionadas y determinar el ganador
+			let resultado;
+			if (cartaSeleccionadaA.ataque > cartaSeleccionadaB.ataque) {
+                resultado = `El jugador A gana la partida. La carta de ${cartaSeleccionadaA.nombre} con ataque ${cartaSeleccionadaA.ataque} venció a la carta de ${cartaSeleccionadaB.nombre} con ataque ${cartaSeleccionadaB.ataque}.`;
+            }
+
+			 else if (cartaSeleccionadaB.ataque > cartaSeleccionadaA.ataque) {
+				resultado = `El jugador B gana la partida. La carta de ${cartaSeleccionadaB.nombre} con ataque ${cartaSeleccionadaB.ataque} venció a la carta de ${cartaSeleccionadaA.nombre} con ataque ${cartaSeleccionadaA.ataque}.`;
+			} else {
+				resultado = "Empate";
+			}
+
+        // Mostrar el resultado del juego
+			document.getElementById("resultado").textContent = resultado;
+		}
+
+    // Agregar las cartas del jugador A al HTML con botones para seleccionar
+		const jugadorALista = document.getElementById("jugador-a");
+		cartasJugadorA.forEach((carta, index) => {
+			const li = document.createElement("li");
+			const boton = document.createElement("button");
+			boton.textContent = "Seleccionar";
+			boton.onclick = function() {
+            // Quitar la selección de la carta anteriormente seleccionada
+				const cartasJugadorALista = document.querySelectorAll("#jugador-a li");
+				cartasJugadorALista.forEach(carta => {
+					carta.classList.remove("seleccionada");
+				});
+
+            // Seleccionar la carta actual
+				li.classList.add("seleccionada");
+			};
+			const nombreCarta = document.createElement("span");
+			nombreCarta.textContent = carta.nombre;
+			const ataqueCarta = document.createElement("span");
+			ataqueCarta.textContent = "Ataque: " + carta.ataque;
+			const defensaCarta = document.createElement("span");
+			defensaCarta.textContent = "Defensa: " + carta.defensa;
+			li.appendChild(boton);
+			li.appendChild(nombreCarta);
+			li.appendChild(ataqueCarta);
+			li.appendChild(defensaCarta);
+			li.dataset.index = index;
+			jugadorALista.appendChild(li);
+		});
+	</script>
+</body>
+</html>

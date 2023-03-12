@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mi juego de cartas intercambiables de Mitología</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mi juego de cartas intercambiables de mitología</h1>
+        
+        <button class="btn btn-primary" id="new-game-btn">Nueva partida</button>
+
+        <div id="new-game-form" class="d-none">
+            <form id="startForm">
+                <div class="form-group">
+                    <label for="player-name">Nombre de jugador:</label>
+                    <input type="text" class="form-control" id="player-name" placeholder="Ingresa tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="mythology-select">Selecciona una mitología:</label>
+                    <select class="form-control" id="mythology-select">
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary" id="#start-game-btn">Comenzar juego</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

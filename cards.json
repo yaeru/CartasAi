@@ -1,0 +1,188 @@
+[
+	{
+		"id": 0,
+		"name": "Zeus",
+		"type": "god",
+		"mythology": "griega",
+		"attack": 10,
+		"info": "Dios del trueno y el cielo, rey de los dioses",
+		"cost": 1
+	},
+	{
+		"id": 1,
+		"name": "Poseidón",
+		"type": "god",
+		"mythology": "griega",
+		"attack": 10,
+		"info": "Dios del mar, los terremotos y los caballos",
+		"cost": 1
+	},
+	{
+		"id": 2,
+		"name": "Hades",
+		"type": "god",
+		"mythology": "griega",
+		"attack": 10,
+		"info": "Dios del inframundo, el tesoro y la riqueza",
+		"cost": 1
+	},
+	{
+		"id": 3,
+		"name": "Atenea",
+		"type": "god",
+		"mythology": "griega",
+		"attack": 10,
+		"info": "Diosa de la sabiduría, la estrategia y la artesanía",
+		"cost": 1
+	},
+	{
+		"id": 4,
+		"name": "Apolo",
+		"type": "god",
+		"mythology": "griega",
+		"attack": 10,
+		"info": "Dios de la música, el arte, la poesía, el sol y la verdad",
+		"cost": 1
+	},
+	{
+		"id": 5,
+		"name": "Artemisa",
+		"type": "god",
+		"mythology": "griega",
+		"attack": 10,
+		"info": "Diosa de la caza, los animales salvajes y la luna",
+		"cost": 1
+	},
+	{
+		"id": 6,
+		"name": "Afrodita",
+		"type": "god",
+		"mythology": "griega",
+		"attack": 10,
+		"info": "Diosa del amor, la belleza y la sexualidad",
+		"cost": 1
+	},
+
+
+	{
+		"id": 7,
+		"name": "Odín",
+		"type": "god",
+		"mythology": "nórdica",
+		"attack": 10,
+		"info": "Dios principal de la mitología nórdica, asociado con la sabiduría, la poesía, la magia y la guerra",
+		"cost": 3
+	},
+	{
+		"id": 8,
+		"name": "Thor",
+		"type": "god",
+		"mythology": "nórdica",
+		"attack": 9,
+		"info": "Dios del trueno, la fuerza, la protección y los campesinos",
+		"cost": 8
+	},
+	{
+		"id": 9,
+		"name": "Loki",
+		"type": "god",
+		"mythology": "nórdica",
+		"attack": 8,
+		"info": "Dios del engaño, la astucia, la travesura y la magia",
+		"cost": 1
+	},
+	{
+		"id": 10,
+		"name": "Freyja",
+		"type": "god",
+		"mythology": "nórdica",
+		"attack": 7,
+		"info": "Diosa del amor, la fertilidad, la guerra y la muerte",
+		"cost": 6
+	},
+	{
+		"id": 11,
+		"name": "Balder",
+		"type": "god",
+		"mythology": "nórdica",
+		"attack": 6,
+		"info": "Dios de la belleza, la luz, la pureza y la inocencia",
+		"cost": 10
+	},
+	{
+		"id": 12,
+		"name": "Heimdall",
+		"type": "god",
+		"mythology": "nórdica",
+		"attack": 5,
+		"info": "Dios de la luz, la vista, el oído, la protección y el futuro",
+		"cost": 2
+	},
+	{
+		"id": 13,
+		"name": "Frigg",
+		"type": "god",
+		"mythology": "nórdica",
+		"attack": 4,
+		"info": "Diosa del amor, el matrimonio, la fertilidad y la maternidad",
+		"cost": 7
+	},
+
+	{
+		"id": 14,
+		"name": "Ra",
+		"mythology": "egipcia",
+		"attack": 8,
+		"info": "Dios del sol, la creación y la fertilidad",
+		"cost": 7
+	},
+	{
+		"id": 15,
+		"name": "Osiris",
+		"mythology": "egipcia",
+		"attack": 9,
+		"info": "Dios de la resurrección, la vegetación y la agricultura",
+		"cost": 3
+	},
+	{
+		"id": 16,
+		"name": "Anubis",
+		"mythology": "egipcia",
+		"attack": 8,
+		"info": "Dios del embalsamamiento y del más allá.",
+		"cost": 2
+	},
+	{
+		"id": 17,
+		"name": "Horus",
+		"mythology": "egipcia",
+		"attack": 7,
+		"info": "Dios del cielo, de la guerra y de la caza.",
+		"cost": 4
+	},
+	{
+		"id": 18,
+		"name": "Isis",
+		"mythology": "egipcia",
+		"attack": 6,
+		"info": "Diosa de la fertilidad, la maternidad y la magia.",
+		"cost": 8
+	},
+	{
+		"id": 19,
+		"name": "Bastet",
+		"mythology": "egipcia",
+		"attack": 5,
+		"info": "Diosa de la alegría, la danza y la protección de los gatos.",
+		"cost": 5
+	},
+	{
+		"id": 20,
+		"name": "Thot",
+		"mythology": "egipcia",
+		"attack": 4,
+		"info": "Dios de la sabiduría, la escritura y la luna.",
+		"cost": 9
+	}
+]
+

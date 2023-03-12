@@ -1,0 +1,75 @@
+.container {
+    margin-top: 50px;
+    text-align: center;
+}
+
+#new-game-form {
+    margin-top: 50px;
+}
+
+#results {
+  display: none;
+}
+
+.life-bar span {
+    position: absolute;
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+
+.life-bar {
+    display: block;
+    position: relative;
+    width: 100%;
+}
+.life-bar progress {
+    -webkit-appearance: none;
+}
+.life-bar progress {
+    width: 100%;
+}
+
+.progress-life {
+  appearance: none;
+  height: 25px;
+  border-radius: 10px;
+  border: none;
+  background-color: #e0e0e0;
+}
+.progress-life::-webkit-progress-bar {
+    /*background-color: #ccc;*/
+    border-radius: 20px;
+}
+.progress-life::-webkit-progress-value {
+  border-radius: 10px;
+  background-color: #4caf50;
+}
+.progress-life::-moz-progress-bar {
+    border-radius: 10px;
+}
+
+
+.card.griega {
+    border-color: #00ACC1;
+    background-color: #B2EBF2;
+}
+.card.nórdica {
+    border-color: #6D4C41;
+    background-color: #D7CCC8;
+}
+.card.egipcia {
+    border-color: #FB8C00;
+    background-color: #FFE0B2;
+}
+
+/* Arena */
+#enemy-arena,
+#player-arena {
+    height: 50vh;
+}
+
+.deck-img {
+    font-size: 7rem;
+}
