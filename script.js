@@ -4,10 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
 	let startingLife = 100;
 	let startingMana = 10;
 
-	let humanPlayerLife = 100;
+	let humanPlayerLife = startingLife;
 	let humanPlayerMana = 100;
-	let computerPlayerLife = 50;
-	let computerPlayerMana = 4;
+	let computerPlayerLife = startingLife;
+	let computerPlayerMana = startingMana;
 
 	let manaPerTurn = 1;
 
